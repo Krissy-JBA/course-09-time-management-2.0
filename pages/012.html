@@ -1,0 +1,108 @@
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+            <div class="new-main-content">
+                <h2>Pardon the interruption</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3  col-xs-12 two-column">
+
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <p>Which of these thieves plague you?</p>
+                        <div class="row"  id="form-checks">
+                          <div class="col-xs-12 col-lg-6 col-pad0">
+                            <form class="jba-checkbox" action="#">
+                                <p>
+                                    <input type="checkbox" id="test1" value="Boss," v-model="inputfield1" v-on:change="saveInputData(inputfield1)"/>
+                                    <label for="test1">The boss calling.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test2" value="Mate," v-model="inputfield2" v-on:change="saveInputData(inputfield2)"/>
+                                    <label for="test2">My mate calling.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test3" value="Other stuff," v-model="inputfield3" v-on:change="saveInputData(inputfield3)"/>
+                                    <label for="test3">Getting an email about other stuff I'm working on.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test4" value="Coffee," v-model="inputfield4" v-on:change="saveInputData(inputfield4)"/>
+                                    <label for="test4">Getting invited out for coffee.</label>
+                                </p>
+                            </form>
+                          </div>
+                          <div class="col-xs-12 col-lg-6 col-pad0">
+                            <form class="jba-checkbox" action="#" >
+                                <p>
+                                    <input type="checkbox" id="test5" value="Facebook," v-model="inputfield5" v-on:change="saveInputData(inputfiel5)"/>
+                                    <label for="test5">Facebook alert.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test6" value="Make," v-model="inputfield6" v-on:change="saveInputData(inputfield6)"/>
+                                    <label for="test6">Getting asked to make the coffee.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test7" value="Asking," v-model="inputfield7" v-on:change="saveInputData(inputfield7)"/>
+                                    <label for="test7">Workmate asking for a hand.</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test8" value="Weekend," v-model="inputfield8" v-on:change="saveInputData(inputfield8)"/>
+                                    <label for="test8">Planning a busy weekend</label>
+                                </p>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+      
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#011" class="course-button prev-button"></a>
+                      </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#013" class="jba-btn jba-btn-submit">Submit</a>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>
