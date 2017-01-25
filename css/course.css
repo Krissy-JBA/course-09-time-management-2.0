@@ -115,7 +115,7 @@ p.orange-blob-box.pSixBlob {
     flex-wrap: wrap;
 }
 
-.two-buttons button {
+.two-buttons button, .two-buttons a {
     max-width: 200px;
     padding: 1em;
     margin-left: 10px;
@@ -160,6 +160,15 @@ p.orange-blob-box.pSixBlob {
     font-size: 18px;
     line-height: 1.3333333;
     cursor:pointer;
+}
+.buttonWrapNew {
+  margin-top:10%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+}
+.buttonWrapNew a {
+  padding:1em !important;
 }
 /*vertical slider*/
 
@@ -388,6 +397,19 @@ word-wrap: break-word;
 .focs-drag-item p{
  display:inline-block;
  transition:none!important;
+}
+/*click numbers*/
+.number-click {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numbers-button {
+    width: 15%;
+    height: auto;
+}
+.inputrenew .beige-blob-box {
+  cursor:pointer;
 }
 /*Media queries*/
 @media screen and  (max-width:500px) {

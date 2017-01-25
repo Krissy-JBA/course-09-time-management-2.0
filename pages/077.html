@@ -2,12 +2,12 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
             <div class="new-main-content">
-                <h2>Working backwards</h2>
+                <h2>How will you do it?</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row flexy-parent pop-in">
+    <div class="row content-row pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
@@ -16,15 +16,32 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row ">
                       <div class="col-md-12">
-                        <p>STEPS - still to come</p>
+                        <p class="purple-text"><{chosenGoal}></p>
+                        <p>Keep working back until you have all the steps you need to reach your goal.</p>
+                        <ul class="arrow-list">
+                          <li>Place the teabag in the cup</li>
+                          <li>Boil the water</li>
+                          <li>Plug in the kettle and turn it on</li>
+                          <li>Fill the kettle</li>
+                        </ul>
+                        <div class="squiggle-container one-line-bot">
+                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                  <div class="squiggle-container">
+                                      <!-- put all of your content into here div -->
+                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile large-textarea">
+                                          <textarea id="textarea" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                      </div>
+                                      <!-- End Content -->
+                                  </div>
+                              </div>
+                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                          </div>    
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
-      </div>
-      <div class="flexy-image flexy-image-mob-fix pop-in ">
-          <img src="/course-files/course-05-interpersonal-communication-2.0/images/png/interComms13@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -43,7 +60,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#071" class="course-button prev-button"></a>
+                          <a href="#076" class="course-button prev-button"></a>
                         </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
@@ -54,8 +71,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                            <a href="#073" class="course-button next-button"></a>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+                          <a href="#078" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': content == false}">Submit</a>
+                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>
