@@ -1,5 +1,32 @@
 /* Add any Course specific CSS here */
-
+.purple-bk-popup2 {
+    width: 100%;
+    height: 100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: #6C1F5D;
+    z-index: 99999;
+}
+.purple-bk-popup2 .popup-inner {
+  margin:0 auto;
+}
+.purple-bk-popup2 .popup-inner p {
+  color:black !important;
+}
 .popup-transition {
  -webkit-transition: all .3s ease;
  transition: all .3s ease;
@@ -15,6 +42,20 @@
  opacity: 0;
  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
+#courseFormWrapperDiv5 textarea {
+  padding: 15px !important;
+  font-size: 13px !important;
+  border: 0px !important;
+  height: 100px;
+  background: transparent;
+  height: 80px;
+  overflow-y: scroll !important; }
+
+#courseFormWrapperDiv5 input{
+  font-size: 13px !important;
+  border: 0px !important;
+  background: transparent;
+  overflow-y: scroll !important; }
 /*Animation page parts*/
 .pageSixLine {
     background-size: 100% 100%;
@@ -52,9 +93,14 @@
 }
 
 .pageSix .pageSixLine.showing {
-    width: 45px;
+    width: 50px;
     -webkit-transition: width 0.3s linear;
     transition: width 0.3s linear;
+}
+p.orange-blob-box.pSixBlob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .transparent {
   opacity:0 !important;
@@ -74,6 +120,23 @@
     padding: 1em;
     margin-left: 10px;
     margin-right: 10px;
+}
+/*3 buttons*/
+.three-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom:13px;
+}
+
+.three-buttons button {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 
 /*other buttons*/
@@ -218,6 +281,114 @@
   -webkit-transition: none !important;
   transition:none !important;
 }
+
+.my-draggable{
+     display: inline-block;
+     padding: 6px 12px;
+     margin-bottom: 0;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 1.42857143;
+     text-align: center;
+     white-space: nowrap;
+     vertical-align: middle;
+     -ms-touch-action: manipulation;
+     touch-action: manipulation;
+     cursor: pointer;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     background: url(/images/course-assets/buttons/rectangle-button.svg);
+     background-repeat: no-repeat;
+     color: white;
+     transition: none;
+     border-width: 0px;
+     padding: 10px 16px;
+     font-size: 16px;
+     line-height: 1.3333333;
+     margin:0!important;
+     z-index:9999;
+     width: 73px;
+     height: 33px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.focus-dropzone-row{
+ display:flex;
+ justify-content:center;
+}
+
+.focus-dropzone-row .focus-dropzone-container{
+ display:flex;
+ flex-direction:column;
+ margin:0.2em;
+ width:25%;
+ height:150px;
+
+}
+
+.focus-text {
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:0.5em;
+}
+
+.focus-text p {
+ margin:auto;
+ text-align:center;
+}
+
+.drop-zone-parent{
+ height:65%;
+ padding:0 .5em;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:space-around;
+}
+
+.drop-zone{
+  width:100%;
+  height:100%;
+ border-radius:10px;
+}
+
+
+#dropzone1 {
+ background:#ea9036 ;
+}
+
+#dropzone2{
+ background:#c51762 ;
+}
+
+#dropzone3{
+ background:#34a345 ;
+}
+#dropzone4 {
+ background:#c9d01f ;
+}
+
+.focus-drag-item{
+ display:flex;
+ justify-content: center;
+ width: 30%;
+ flex-direction: column;
+word-wrap: break-word;
+}
+.focus-drag-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.focs-drag-item p{
+ display:inline-block;
+ transition:none!important;
+}
 /*Media queries*/
 @media screen and  (max-width:500px) {
   .slider-answers p.orange-blob-box {
@@ -231,6 +402,12 @@
   }
   .textarea-small {
     height:30px;
+  }
+  .focus-dropzone-row .focus-dropzone-container {
+    width:48%;
+  }
+  .focus-dropzone-row{
+   flex-wrap:wrap;
   }
 
 }

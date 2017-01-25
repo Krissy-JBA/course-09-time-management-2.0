@@ -1,0 +1,218 @@
+<div class="purple-bk-popup2" v-show="popup == true">
+        <div class="popup-inner">
+            <div class="squiggle-container">
+                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+                <!-- put all of your content into the squiggle content div -->
+                <div class="squiggle-content white-squiggle">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <h4 class="text-center" style="color:black !important">Edit your goal</h4>
+                            <div class="squiggle-container flex-center" v-show="edit1 == true">
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                      <div class="squiggle-container one-line">
+                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                                <div class="squiggle-container">
+                                                    <!-- put all of your content into here div -->
+                                                    <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile">
+                                                        <textarea id="textarea"  v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                                    </div>
+                                                    <!-- End Content -->
+                                                </div>
+                                            </div>
+                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="squiggle-container flex-center" v-show="edit2 == true">
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                      <div class="squiggle-container one-line">
+                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                                <div class="squiggle-container">
+                                                    <!-- put all of your content into here div -->
+                                                    <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv textarea-mobile">
+                                                        <textarea id="textarea2"  v-on:change="saveInputField(inputfield2)" v-model="inputfield2" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                                    </div>
+                                                    <!-- End Content -->
+                                                </div>
+                                            </div>
+                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="squiggle-container flex-center" v-show="edit3 == true">
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                      <div class="squiggle-container one-line">
+                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                                <div class="squiggle-container">
+                                                    <!-- put all of your content into here div -->
+                                                    <div id="courseFormWrapperDiv3" class="course-form-padding courseFormWrapDiv textarea-mobile">
+                                                        <textarea id="textarea3"  v-on:change="saveInputField(inputfield3)" v-model="inputfield3" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                                    </div>
+                                                    <!-- End Content -->
+                                                </div>
+                                            </div>
+                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="squiggle-container flex-center" v-show="edit4 == true">
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                      <div class="squiggle-container one-line">
+                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                                <div class="squiggle-container">
+                                                    <!-- put all of your content into here div -->
+                                                    <div id="courseFormWrapperDiv4" class="course-form-padding courseFormWrapDiv textarea-mobile">
+                                                        <textarea id="textarea4"  v-on:change="saveInputField(inputfield4)" v-model="inputfield4" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                                    </div>
+                                                    <!-- End Content -->
+                                                </div>
+                                            </div>
+                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="squiggle-container flex-center" v-show="edit5 == true">
+                                <div class="row">
+                                    <div class="col-md-12 col-pad0">
+                                      <div class="squiggle-container one-line">
+                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                                <div class="squiggle-container">
+                                                    <!-- put all of your content into here div -->
+                                                    <div id="courseFormWrapperDiv5" class="course-form-padding courseFormWrapDiv textarea-mobile">
+                                                        <textarea id="textarea5"  v-on:change="saveInputField(inputfield5)" v-model="inputfield5" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                                    </div>
+                                                    <!-- End Content -->
+                                                </div>
+                                            </div>
+                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+            </div>
+            <div class="fright" @click="popup = false">
+                <div class="course-button back-button"></div>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid h100">
+    <div class="row header-row  ">
+        <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
+            <div class="new-main-content">
+                <h2>Goal setting - Timely</h2>
+                <!-- Change Header -->
+            </div>
+        </div>
+    </div>
+    <div class="row content-row pop-in">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <!-- put all of your content into here div -->
+          <div class="squiggle-container pop-in">
+              <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
+              <!-- put all of your content into the squiggle content div -->
+              <div class="squiggle-content white-squiggle">
+                  <div class="row ">
+                      <div class="col-md-12">
+                        <p>So here's your goal from earlier – have one more look to make sure it's just right.</p>
+                        <div class="row one-line">
+                          <div class="col-xs-10 col-pad0">
+                            <p><{goal2Rewrite}></p>
+                          </div>
+                          <div class="col-xs-2 col-pad0">
+                            <a @click="popup1" class="jba-btn">Edit</a>
+                          </div>
+                        </div>
+                        <div class="row one-line">
+                          <div class="col-xs-10 col-pad0">
+                            <p><{goalBHAG2Measure}></p>
+                          </div>
+                          <div class="col-xs-2 col-pad0">
+                            <a @click="popup2" class="jba-btn">Edit</a>
+                          </div>
+                        </div>
+                        <div class="row one-line">
+                          <div class="col-xs-10 col-pad0">
+                            <p><{goal2Rewrite2}></p>
+                          </div>
+                          <div class="col-xs-2 col-pad0">
+                            <a @click="popup3" class="jba-btn">Edit</a>
+                          </div>
+                        </div>
+                        <div class="row one-line">
+                          <div class="col-xs-10 col-pad0">
+                            <p><{goal2Rewrite3}></p>
+                          </div>
+                          <div class="col-xs-2 col-pad0">
+                            <a @click="popup4" class="jba-btn">Edit</a>
+                          </div>
+                        </div>
+                        <div class="row one-line">
+                          <div class="col-xs-10 col-pad0">
+                            <p><{goal2Rewrite4}></p>
+                          </div>
+                          <div class="col-xs-2 col-pad0">
+                            <a @click="popup5" class="jba-btn">Edit</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
+          </div>
+      </div>
+  </div>
+    <!-- end  content -->
+    <!-- =========================== -->
+    <!-- footer start -->
+    <div class="row progressWrap">
+        <div class="col-xs-12 col-pad0">
+            <!-- S:Progress Bar -->
+            <div class="progress-row">
+                <div class="hand-arrow">
+                    <div class="percentageTxt hidden">
+                        <p>60%</p>
+                    </div>
+                    <img class="percentageArrow hidden" src="../img/progressBar/hand_arrow.png" alt="" />
+                </div>
+                <div class="container progressContainer">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                          <a href="#065" class="course-button prev-button"></a>
+                        </div>
+                        <!-- leftArrow -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align">
+                            <div class="course-progress-bar-wrap">
+                                <div class="courseProgressBar">
+                                    <p class="fixed hidden">60%</p>
+                                    <div class="percentageProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
+                          <a href="#067" class="course-button next-button"></a>
+                        </div>
+                        <!-- rightArrow -->
+                    </div>
+                </div>
+            </div>
+            <!-- E:Progress Bar -->
+        </div>
+    </div>
+</div>

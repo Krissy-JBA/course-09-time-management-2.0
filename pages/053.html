@@ -2,7 +2,7 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>Simple</h2>
+                <h2>Goal setting</h2>
                 <!-- Change Header -->
             </div>
         </div>
@@ -15,27 +15,24 @@
               <!-- put all of your content into the squiggle content div -->
               <div class="squiggle-content white-squiggle">
                   <div class="row">
-                    <div class="col-xs-12">
-                      <p>Think about when each task needs to be completed.</p>
-                    </div>
-                  </div>
-                  <div class="row sortable-goals">
-                     <div class="col-xs-12 sortable-goals">
-                       <div class="numbers-list">
-                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers1@2x.png" alt=""></div>
-                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers2@2x.png" alt=""></div>
-                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers3@2x.png" alt=""></div>
-                       </div>
-
-                       <ul id="sortable" class="skills-list">
-                          <li track-by="$index" id="<{goal.id}>" v-for="goal in goals | orderBy 'orderGoal'" class="skills-item skills-draggable">
-                              <{ goal.name }></li>
-                       </ul>
-                        </div>
+                      <div class="col-md-12">
+                        <p>What's an achievable short term goal you want to set?</p>
+                        <div class="squiggle-container one-line-bot">
+                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
+                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
+                                  <div class="squiggle-container">
+                                      <!-- put all of your content into here div -->
+                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile large-textarea">
+                                          <textarea id="textarea" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
+                                      </div>
+                                      <!-- End Content -->
+                                  </div>
+                              </div>
+                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                          </div>
 
                       </div>
-                      <p class="blue-text text-center">Drag your goals into order from most urgent to least urgent.</p>
-
+                  </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
@@ -57,7 +54,7 @@
                 <div class="container progressContainer">
                     <div class="row">
                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
-                          <a href="#042" class="course-button prev-button"></a>
+                          <a href="#052" class="course-button prev-button"></a>
                       </div>
                         <!-- leftArrow -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align safari-only2">
@@ -69,7 +66,8 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                            <a href="#044" class="jba-btn jba-btn-submit">Submit</a>
+                          <a href="#054" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': content == false}">Submit</a>
+                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
                         </div>
                         <!-- rightArrow -->
                     </div>
