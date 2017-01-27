@@ -31,6 +31,7 @@ pageComponentry = {
     var self = this;
     if(this.exerciseData['did-you-have-to-change-order']){
       this.answer = this.exerciseData['did-you-have-to-change-order'];
+      this.content = true;
     }
 
 
