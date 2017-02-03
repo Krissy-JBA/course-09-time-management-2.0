@@ -10,7 +10,7 @@ pageComponentry = {
   methods: {
     // Any page specific methods go here.
     saveInputField: function(value){
-      this.$parent.saveData('goal2Rewrite3', this.inputfield1);
+      this.$parent.saveData('goal2Rewrite2', this.inputfield1);
     },
     checkContent: function() {
       if (this.inputfield1.length >=1 ) {
@@ -24,9 +24,9 @@ pageComponentry = {
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var self = this;
-    if(this.exerciseData['goal2Rewrite3']){
+    if(this.exerciseData['goal2Rewrite2']){
       this.content = true;
-      this.inputfield1 = this.exerciseData['goal2Rewrite3'];
+      this.inputfield1 = this.exerciseData['goal2Rewrite2'];
     }
     if(this.exerciseData['goal2']){
       this.goal2 = this.exerciseData['goal2'];

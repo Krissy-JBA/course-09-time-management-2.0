@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-    <div class="row content-row  pop-in">
+    <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
@@ -16,40 +16,20 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row">
                       <div class="col-md-12">
-
-                        <p>What did you learn from this activity?</p>
-                        <div class="squiggle-container one-line-bot">
-                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                  <div class="squiggle-container">
-                                      <!-- put all of your content into here div -->
-                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                          <textarea id="textarea" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField1(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                      </div>
-                                      <!-- End Content -->
-                                  </div>
-                              </div>
-                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                          </div>
-                          <p>What else could impact on the order?</p>
-                          <div class="squiggle-container one-line-bot">
-                                <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                    <div class="squiggle-container">
-                                        <!-- put all of your content into here div -->
-                                        <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                            <textarea id="textarea2" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField2(inputfield2)" v-model="inputfield2" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                        </div>
-                                        <!-- End Content -->
-                                    </div>
-                                </div>
-                                <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                            </div>
+                        <p>Did you need to reorder your list much?</p>
+                        <div class="one-line-bot three-buttons">
+                            <button type="button" class="magenta-blob-box" @click="oneButton(answer)" v-bind:class="{'purple-blob-box': answer == 'Yes'}">Yes</button>
+                            <button type="button" class="magenta-blob-box" @click="twoButton(answer)" v-bind:class="{'purple-blob-box': answer == 'No'}">No</button>
+                            <button type="button" class="magenta-blob-box" @click="threeButton(answer)" v-bind:class="{'purple-blob-box': answer == 'A little'}">A little</button>
+                        </div>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <img src="/course-files/course-09-time-management/images/png/time29.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->

@@ -13,8 +13,8 @@ pageComponentry = {
   methods: {
     // Any page specific methods go here.
     saveInputField: function(value){
-      this.$parent.saveData('chosenGoalAdd3', this.inputfield1);
-      this.$parent.saveData('chosenGoalAdd4', this.inputfield2);
+      this.$parent.saveData('chosenGoalAdd1', this.inputfield1);
+      this.$parent.saveData('chosenGoalAdd2', this.inputfield2);
     },
     checkContent: function() {
       if (this.inputfield1.length >=1 && this.inputfield2.length >=1 ) {
@@ -28,8 +28,8 @@ pageComponentry = {
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var self = this;
-    if(this.exerciseData['chosenGoalAdd3']){
-      this.inputfield1 = this.exerciseData['chosenGoalAdd3'];
+    if(this.exerciseData['chosenGoalAdd1']){
+      this.inputfield1 = this.exerciseData['chosenGoalAdd1'];
       if(this.inputfield1.length >=1 ) {
         this.content1 = true;
       }
@@ -41,8 +41,8 @@ pageComponentry = {
         this.content = true;
       }
     }
-    if(this.exerciseData['chosenGoalAdd4']){
-      this.inputfield2 = this.exerciseData['chosenGoalAdd4'];
+    if(this.exerciseData['chosenGoalAdd2']){
+      this.inputfield2 = this.exerciseData['chosenGoalAdd2'];
       if(this.inputfield1.length >=1 ) {
         this.content1 = true;
       }

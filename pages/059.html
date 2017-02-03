@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-    <div class="row content-row pop-in">
+    <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
@@ -16,31 +16,16 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row ">
                       <div class="col-md-12">
-                        <p>Time to pick one, so think about…</p>
-                        <ul class="arrow-list">
-                          <li>Where you want to be in 10 years. Picture what you'll be doing? Who's in your life? Do you work for someone else, yourself or not at all?</li>
-                          <li>What feeling or emotion do you want to enjoy when you achieve your goal?</li>
-                          <li>What do you want folk to say about you at your funeral?</li>
-                        </ul>
-                        <p>My BHAG..</p>
-                        <div class="squiggle-container one-line-bot">
-                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                  <div class="squiggle-container">
-                                      <!-- put all of your content into here div -->
-                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile large-textarea">
-                                          <textarea id="textarea" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                      </div>
-                                      <!-- End Content -->
-                                  </div>
-                              </div>
-                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                          </div>
+                        <p>Big Hairy Audacious Goal is like your own personal vision statement.</p>
+                        <p>It's a really long-term goal (like 10-30 years long!) that's challenging but not impossible. And it should be something you're truly excited about.</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <img src="/course-files/course-09-time-management/images/png/time37.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -70,9 +55,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                          <a href="#060" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': content == false}">Submit</a>
-                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#060" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

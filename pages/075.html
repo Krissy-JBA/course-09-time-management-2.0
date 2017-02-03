@@ -2,12 +2,12 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
             <div class="new-main-content">
-                <h2>How will you do it?</h2>
+                <h2>Go backwards</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row pop-in">
+    <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
@@ -16,42 +16,26 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row ">
                       <div class="col-md-12">
-                        <p>Here's your chosen goal:</p>
-                        <p class="purple-text"><{chosenGoal}></p>
-                        <p>Plan it out: Take a step back, what do you need to accomplish just before you achieve your goal?</p>
-                        <p>i.e if my goal is a cup of great tasting tea - my first step back is to taste it and add sugar if needed.</p>
-                        <div class="squiggle-container one-line-bot">
-                              <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                              <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                  <div class="squiggle-container">
-                                      <!-- put all of your content into here div -->
-                                      <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                          <textarea id="textarea" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                      </div>
-                                      <!-- End Content -->
-                                  </div>
-                              </div>
-                              <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
+                        <p>Your turn - make a backwards plan for one of your goals... Select one below and we'll give it a shot.</p>
+                        <div class="inputrenew">
+                          <div @click="selectMe" v-bind:class="{'purple-blob-box': goal1, 'beige-blob-box': !goal1}">
+                            <{goalrecall1}>
                           </div>
-                          <p>Take another step: i.e. I need to let the tea brew for 3-5 minutes.</p>
-                          <div class="squiggle-container one-line">
-                                <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                    <div class="squiggle-container">
-                                        <!-- put all of your content into here div -->
-                                        <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                            <textarea id="textarea2" v-on:keyup="checkContent" @contextmenu="checkContent" v-on:change="saveInputField(inputfield2)" v-model="inputfield2" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                        </div>
-                                        <!-- End Content -->
-                                    </div>
-                                </div>
-                                <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                            </div>
+                          <div @click="selectMe2" v-bind:class="{'purple-blob-box': goal2, 'beige-blob-box': !goal2}">
+                            <{goalrecall2}>
+                          </div>
+                          <div @click="selectMe3" v-bind:class="{'purple-blob-box': goal3, 'beige-blob-box': !goal3}">
+                            <{goalrecall3}>
+                          </div>
+                        </div>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <img src="/course-files/course-09-time-management/images/png/time28.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -81,9 +65,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                          <a href="#076" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': content == false}">Submit</a>
-                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#076" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

@@ -2,7 +2,7 @@
     <div class="row header-row  ">
         <div class="col-md-12 col-xs-8 col-xs-offset-2 pop-in col-md-offset-0">
             <div class="new-main-content">
-                <h2>Prioritisation (Simple)</h2>
+                <h2>Simple</h2>
                 <!-- Change Header -->
             </div>
         </div>
@@ -15,15 +15,27 @@
               <!-- put all of your content into the squiggle content div -->
               <div class="squiggle-content white-squiggle">
                   <div class="row">
-                      <div class="col-md-12">
-                        <p>Did you need to reorder your list much?</p>
-                        <div class="one-line-bot three-buttons">
-                            <button type="button" class="magenta-blob-box" @click="oneButton(answer)" v-bind:class="{'purple-blob-box': answer == 'Yes'}">Yes</button>
-                            <button type="button" class="magenta-blob-box" @click="twoButton(answer)" v-bind:class="{'purple-blob-box': answer == 'No'}">No</button>
-                            <button type="button" class="magenta-blob-box" @click="threeButton(answer)" v-bind:class="{'purple-blob-box': answer == 'A little'}">A little</button>
-                        </div>
-                      </div>
+                    <div class="col-xs-12">
+                      <p>Think about when each task needs to be completed.</p>
+                    </div>
                   </div>
+                  <div class="row sortable-goals">
+                     <div class="col-xs-12 sortable-goals">
+                       <div class="numbers-list">
+                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers1@2x.png" alt=""></div>
+                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers2@2x.png" alt=""></div>
+                         <div class="numbers"><img src="/course-files/course-09-time-management/images/png/numbers3@2x.png" alt=""></div>
+                       </div>
+
+                       <ul id="sortable" class="skills-list">
+                          <li track-by="$index" id="<{goal.id}>" v-for="goal in goals | orderBy 'orderGoal'" class="skills-item skills-draggable">
+                              <{ goal.name }></li>
+                       </ul>
+                        </div>
+
+                      </div>
+                      <p class="blue-text text-center">Drag your goals into order from most urgent to least urgent.</p>
+
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
@@ -57,8 +69,7 @@
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                          <a href="#045" class="jba-btn-submit jba-btn" v-bind:class="{'jba-btn-locked': content == false}">Submit</a>
-                          <i class="arrowLock fa fa-lock" v-show="content == false" aria-hidden="true"></i>
+                            <a href="#045" class="jba-btn jba-btn-submit">Submit</a>
                         </div>
                         <!-- rightArrow -->
                     </div>

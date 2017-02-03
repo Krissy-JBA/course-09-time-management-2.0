@@ -2,35 +2,44 @@ pageComponentry = {
   data: function() {
     return {
       // Any page specific data goes here.
-      popup:false,
-      chosenGoalAdd1: '',
-      chosenGoalAdd2: '',
-      chosenGoalAdd3: '',
-      chosenGoalAdd4: '',
-      chosenGoalAdd5: ''
+        inputfield1: '',
+        content: false,
+        chosenGoal: '',
     }
   },
   methods: {
     // Any page specific methods go here.
+    saveInputField: function(value){
+      this.$parent.saveData('chosenGoalAdd5', this.inputfield1);
+    },
+    checkContent: function() {
+      if (this.inputfield1.length >=1) {
+        this.content = true;
+      }
+      else {
+        this.content = false;
+      }
+    }
   },
   ready: function() {
-    // This will be fired when the page is loaded
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
-    if(this.exerciseData['chosenGoalAdd1']){
-      this.chosenGoalAdd1 = this.exerciseData['chosenGoalAdd1'];
-    }
-    if(this.exerciseData['chosenGoalAdd2']){
-      this.chosenGoalAdd2= this.exerciseData['chosenGoalAdd2'];
-    }
-    if(this.exerciseData['chosenGoalAdd3']){
-      this.chosenGoalAdd3 = this.exerciseData['chosenGoalAdd3'];
-    }
-    if(this.exerciseData['chosenGoalAdd4']){
-      this.chosenGoalAdd4 = this.exerciseData['chosenGoalAdd4'];
-    }
+    var self = this;
     if(this.exerciseData['chosenGoalAdd5']){
-      this.chosenGoalAdd5 = this.exerciseData['chosenGoalAdd5'];
+      this.inputfield1 = this.exerciseData['chosenGoalAdd5'];
+      this.content = true;
     }
+    if(this.exerciseData['chosenGoal']){
+      this.chosenGoal = this.exerciseData['chosenGoal'];
+    }
+
+
+    document.getElementById("textarea").addEventListener("paste", myFunction);
+    function myFunction() {
+     self.content = true;
+
+    }
+
+
   }
 
 

@@ -2,7 +2,7 @@ pageComponentry = {
   data: function() {
     return {
       goals:"",
-      goalsRearrange2: ""
+      goalsReload1: ""
 
       // Any page specific data goes here.
     }
@@ -18,8 +18,8 @@ pageComponentry = {
 
 
        var self = this;
-       if(this.exerciseData['goalsRearrange2']){
-         self.goals = JSON.parse(this.exerciseData['goalsRearrange2']);
+       if(this.exerciseData['goalsRearrange1']){
+         self.goals = JSON.parse(this.exerciseData['goalsRearrange1']);
        }
        else {
          self.goals = JSON.parse(this.exerciseData['goals']);
@@ -49,9 +49,9 @@ pageComponentry = {
 
                     console.log(self.goals);
 
-                    self.$parent.saveData('goalsRearrange2', JSON.stringify(self.goals));
+                    self.$parent.saveData('goalsRearrange1', JSON.stringify(self.goals));
 
-                    self.$parent.saveData('goalsRearrange2Reload', 'true');
+                    self.$parent.saveData('goalsRearrange1Reload', 'true');
                 }
 
             }

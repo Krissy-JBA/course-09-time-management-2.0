@@ -1,42 +1,65 @@
 pageComponentry = {
   data: function() {
     return {
+      goals:"",
+      goalsRearrange2: ""
+
       // Any page specific data goes here.
-        answer: '',
-        content: false,
-
-
     }
   },
   methods: {
     // Any page specific methods go here.
-    oneButton: function() {
-      this.answer = 'Yes';
-      this.$parent.saveData('did-you-have-to-change-order', this.answer);
-      this.content = true;
-    },
-    twoButton: function() {
-      this.answer = 'No';
-      this.$parent.saveData('did-you-have-to-change-order', this.answer);
-      this.content = true;
-    },
-    threeButton: function() {
-      this.answer = 'A little';
-      this.$parent.saveData('did-you-have-to-change-order', this.answer);
-      this.content = true;
-    }
+
+
   },
   ready: function() {
-    courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
-    var self = this;
-    if(this.exerciseData['did-you-have-to-change-order']){
-      this.answer = this.exerciseData['did-you-have-to-change-order'];
-      this.content = true;
-    }
+      var self = this;
+      courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
+
+
+       var self = this;
+       if(this.exerciseData['goalsRearrange2']){
+         self.goals = JSON.parse(this.exerciseData['goalsRearrange2']);
+       }
+       else {
+         self.goals = JSON.parse(this.exerciseData['goals']);
+       }
+
+       var customArray = [];
+
+
+      $('#sortable').sortable({
+            //observe the update event...
+            update: function(event, ui) {
+
+                customArray = $("#sortable").sortable("toArray");
+
+                var arrayLength = customArray.length;
+
+                for (i = 0; i < arrayLength; i++){
+
+                    var arrayGoals = customArray;
+
+                    var currentGoal = self.goals[i].id;
+
+
+                    var newIndex = arrayGoals.indexOf(currentGoal);
+
+                    self.goals[i].orderGoal = newIndex;
+
+                    console.log(self.goals);
+
+                    self.$parent.saveData('goalsRearrange2', JSON.stringify(self.goals));
+
+                    self.$parent.saveData('goalsRearrange2Reload', 'true');
+                }
+
+            }
+        });
 
 
 
-  }
+     }
 
 
 }

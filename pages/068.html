@@ -1,138 +1,13 @@
-<div class="purple-bk-popup2" v-show="popup == true">
-        <div class="popup-inner">
-            <div class="squiggle-container">
-                <div class="top-squiggle"><img src="/images/course-assets/squiggle/white-top.svg" alt=""></div>
-                <!-- put all of your content into the squiggle content div -->
-                <div class="squiggle-content white-squiggle">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="squiggle-container" v-show="edit1 == true">
-                              <p>Now, make it specific...</p>
-                              <p>THINK: What/When/Where.</p>
-                                <div class="row flex-center">
-                                    <div class="col-md-12 col-pad0">
-                                      <div class="squiggle-container one-line">
-                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                                <div class="squiggle-container">
-                                                    <!-- put all of your content into here div -->
-                                                    <div id="courseFormWrapperDiv1" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                                        <textarea id="textarea"  v-on:change="saveInputField(inputfield1)" v-model="inputfield1" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                                    </div>
-                                                    <!-- End Content -->
-                                                </div>
-                                            </div>
-                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="squiggle-container" v-show="edit2 == true">
-                              <p>Make it measurable.</p>
-                              <p>What needs to have happened for you to think: 'I've achieved it!'?</p>
-                                <div class="row  flex-center">
-                                    <div class="col-md-12 col-pad0">
-                                      <div class="squiggle-container one-line">
-                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                                <div class="squiggle-container">
-                                                    <!-- put all of your content into here div -->
-                                                    <div id="courseFormWrapperDiv2" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                                        <textarea id="textarea2"  v-on:change="saveInputField(inputfield2)" v-model="inputfield2" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                                    </div>
-                                                    <!-- End Content -->
-                                                </div>
-                                            </div>
-                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="squiggle-container" v-show="edit3 == true">
-                              <p>Make it attainable.</p>
-                              <p>CHECK: what skills, abilitites, situations are needed?</p>
-                              <p>Do you have those?</p>
-                                <div class="row  flex-center">
-                                    <div class="col-md-12 col-pad0">
-                                      <div class="squiggle-container one-line">
-                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                                <div class="squiggle-container">
-                                                    <!-- put all of your content into here div -->
-                                                    <div id="courseFormWrapperDiv3" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                                        <textarea id="textarea3"  v-on:change="saveInputField(inputfield3)" v-model="inputfield3" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                                    </div>
-                                                    <!-- End Content -->
-                                                </div>
-                                            </div>
-                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="squiggle-container" v-show="edit4 == true">
-                              <p>Make it relevant.</p>
-                              <p>CHECK: Is this something you really want?</p>
-                              <p>How will you feel when you achieve it?</p>
-                                <div class="row flex-center">
-                                    <div class="col-md-12 col-pad0">
-                                      <div class="squiggle-container one-line">
-                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                                <div class="squiggle-container">
-                                                    <!-- put all of your content into here div -->
-                                                    <div id="courseFormWrapperDiv4" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                                        <textarea id="textarea4"  v-on:change="saveInputField(inputfield4)" v-model="inputfield4" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                                    </div>
-                                                    <!-- End Content -->
-                                                </div>
-                                            </div>
-                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="squiggle-container" v-show="edit5 == true">
-                              <p>Make it timely</p>
-                              <p>Think about when you can work on this, and then schedule it in your diary.</p>
-                                <div class="row flex-center">
-                                    <div class="col-md-12 col-pad0">
-                                      <div class="squiggle-container one-line">
-                                            <div class="top-squiggle top-squiggle-change-1"><img src="/images/course-assets/forms/lightTop.svg" alt=""></div>
-                                            <div class="squiggle-content textbox-colour-select-1 light-beige-textbox">
-                                                <div class="squiggle-container">
-                                                    <!-- put all of your content into here div -->
-                                                    <div id="courseFormWrapperDiv5" class="course-form-padding courseFormWrapDiv textarea-mobile">
-                                                        <textarea id="textarea5"  v-on:change="saveInputField(inputfield5)" v-model="inputfield5" placeholder="Enter text here..." class="form-control form-control-1 course-input-field-black"></textarea>
-                                                    </div>
-                                                    <!-- End Content -->
-                                                </div>
-                                            </div>
-                                            <div class="bot-squiggle bot-squiggle-change-1"><img src="/images/course-assets/forms/lightBott.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
-            </div>
-            <div class="fright" @click="popup = false">
-                <div class="course-button back-button"></div>
-            </div>
-        </div>
-    </div>
 <div class="container-fluid h100">
     <div class="row header-row  ">
         <div class="col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 pop-in">
             <div class="new-main-content">
-                <h2>Goal setting - Two more...</h2>
+                <h2>On a roll?</h2>
                 <!-- Change Header -->
             </div>
         </div>
     </div>
-    <div class="row content-row pop-in">
+    <div class="row content-row flexy-parent pop-in">
       <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
           <!-- put all of your content into here div -->
           <div class="squiggle-container pop-in">
@@ -141,20 +16,16 @@
               <div class="squiggle-content white-squiggle">
                   <div class="row ">
                       <div class="col-md-12">
-                        <p><strong>Goal 2</strong></p>
-                        <div class="number-click one-line one-line-bot">
-                          <div @click="popup1" class="numbers-button"><img src="/course-files/course-09-time-management/images/png/magenta1.png" alt=""></div>
-                          <div @click="popup2" class="numbers-button"><img src="/course-files/course-09-time-management/images/png/magenta2.png" alt=""></div>
-                          <div @click="popup3" class="numbers-button"><img src="/course-files/course-09-time-management/images/png/magenta3.png" alt=""></div>
-                          <div @click="popup4" class="numbers-button"><img src="/course-files/course-09-time-management/images/png/magenta4.png" alt=""></div>
-                          <div @click="popup5" class="numbers-button"><img src="/course-files/course-09-time-management/images/png/magenta5.png" alt=""></div>
-                        </div>
-                        <p class="blue-text text-center">Tap the numbers and work through your second goal to make it SMART</p>
+                        <p>If that really worked for you – don't stop!</p>
+                        <p>We have got two more below that you can complete if you've got the time.</p>
                       </div>
                   </div>
               </div>
               <div class="bot-squiggle"><img src="/images/course-assets/squiggle/white-bottom.svg" alt=""></div>
           </div>
+      </div>
+      <div class="flexy-image flexy-image-mob-fix pop-in col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-pad0  col-xs-12">
+          <img src="/course-files/course-09-time-management/images/png/interComms13@2x.png"  alt="interpersonal communication">
       </div>
   </div>
     <!-- end  content -->
@@ -184,8 +55,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center safari-only">
-                          <a href="#069" class="course-button next-button"></a>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-flex-center">
+                            <a href="#069" class="course-button next-button"></a>
                         </div>
                         <!-- rightArrow -->
                     </div>

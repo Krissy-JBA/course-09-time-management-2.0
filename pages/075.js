@@ -2,80 +2,62 @@ pageComponentry = {
   data: function() {
     return {
       // Any page specific data goes here.
-        inputfield1: '',
-        inputfield2:'',
-        content: false,
-        chosenGoal: '',
-        content1: false,
-        content2: false
+      goals:[],
+      goal1: false,
+      goal2: false,
+      goal3: false,
+      chosenGoal: '',
+      goalrecall1: '',
+      goalrecall2: '',
+      goalrecall3: ''
     }
   },
   methods: {
     // Any page specific methods go here.
-    saveInputField: function(value){
-      this.$parent.saveData('chosenGoalAdd1', this.inputfield1);
-      this.$parent.saveData('chosenGoalAdd2', this.inputfield2);
+    selectMe: function() {
+      this.goal1 = true;
+      this.goal2 = false;
+      this.goal3 = false;
+      this.chosenGoal = this.goals[0].name;
+      this.$parent.saveData('chosenGoal', this.chosenGoal);
     },
-    checkContent: function() {
-      if (this.inputfield1.length >=1 && this.inputfield2.length >=1 ) {
-        this.content = true;
-      }
-      else {
-        this.content = false;
-      }
+    selectMe2: function() {
+      this.goal2 = true;
+      this.goal1 = false;
+      this.goal3 = false;
+      this.chosenGoal = this.goals[1].name;
+      this.$parent.saveData('chosenGoal', this.chosenGoal);
+    },
+    selectMe3: function() {
+      this.goal3 = true;
+      this.goal2 = false;
+      this.goal1 = false;
+      this.chosenGoal = this.goals[2].name;
+      this.$parent.saveData('chosenGoal', this.chosenGoal);
     }
   },
   ready: function() {
+    // This will be fired when the page is loaded
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var self = this;
-    if(this.exerciseData['chosenGoalAdd1']){
-      this.inputfield1 = this.exerciseData['chosenGoalAdd1'];
-      if(this.inputfield1.length >=1 ) {
-        this.content1 = true;
-      }
-
-      if(this.inputfield2.length >=1 ) {
-        this.content2 = true;
-      }
-      if(this.inputfield1.length >=1 && this.inputfield2.length >=1) {
-        this.content = true;
-      }
-    }
-    if(this.exerciseData['chosenGoalAdd2']){
-      this.inputfield2 = this.exerciseData['chosenGoalAdd2'];
-      if(this.inputfield1.length >=1 ) {
-        this.content1 = true;
-      }
-
-      if(this.inputfield2.length >=1 ) {
-        this.content2 = true;
-      }
-      if(this.inputfield1.length >=1 && this.inputfield2.length >=1) {
-        this.content = true;
-      }
+    if(this.exerciseData['goals']){
+      this.goals = JSON.parse(this.exerciseData['goals']);
+      this.goalrecall1 = self.goals[0].name;
+      this.goalrecall2 = self.goals[1].name;
+      this.goalrecall3 = self.goals[2].name;
     }
     if(this.exerciseData['chosenGoal']){
-      this.chosenGoal = this.exerciseData['chosenGoal'];
+      this.chosenGoal = (this.exerciseData['chosenGoal']);
+      if (self.chosenGoal == self.goalrecall1) {
+        self.goal1 = true;
+      }
+      else if (self.chosenGoal == self.goalrecall2) {
+        self.goal2 = true;
+      }
+      if (self.chosenGoal == self.goalrecall3) {
+        self.goal3 = true;
+      }
     }
-
-
-    document.getElementById("textarea").addEventListener("paste", myFunction);
-    function myFunction() {
-     self.content1 = true;
-     if(self.content1 == true && self.content2 == true) {
-       self.content = true;
-     }
-
-    }
-    document.getElementById("textarea2").addEventListener("paste", myFunction2);
-    function myFunction2() {
-     self.content2 = true;
-     if(self.content1 == true && self.content2 == true) {
-       self.content = true;
-     }
-
-    }
-
   }
 
 

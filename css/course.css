@@ -408,7 +408,7 @@ word-wrap: break-word;
     width: 15%;
     height: auto;
 }
-.inputrenew .beige-blob-box {
+.inputrenew .beige-blob-box, .cursor {
   cursor:pointer;
 }
 /*Media queries*/

@@ -8,18 +8,18 @@ courseSchema = {
   },
   {
       'name': 'Pardon the interruption',
-      'first_page': '009'
+      'first_page': '010'
   },
   {
       'name': 'The put off',
-      'first_page': '022'
+      'first_page': '023'
   },
   {
       'name': 'Prioritisation',
-      'first_page': '041'
+      'first_page': '042'
   },
   {
       'name': 'Goal Setting',
-      'first_page': '052'
+      'first_page': '053'
   }]
 }

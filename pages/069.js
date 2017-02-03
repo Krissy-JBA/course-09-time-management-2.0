@@ -18,15 +18,15 @@ pageComponentry = {
   methods: {
     // Any page specific methods go here.
     saveInputField: function(value){
-      this.$parent.saveData('newGoal2part1', this.inputfield1);
+      this.$parent.saveData('newGoal1part1', this.inputfield1);
       this.goal2Rewrite = this.inputfield1;
-      this.$parent.saveData('newGoal2part2', this.inputfield2);
+      this.$parent.saveData('newGoal1part2', this.inputfield2);
       this.goalBHAG2Measure = this.inputfield2;
-      this.$parent.saveData('newGoal2part3', this.inputfield3);
+      this.$parent.saveData('newGoal1part3', this.inputfield3);
       this.goal2Rewrite2 = this.inputfield3;
-      this.$parent.saveData('newGoal2part4', this.inputfield4);
+      this.$parent.saveData('newGoal1part4', this.inputfield4);
       this.goal2Rewrite3 = this.inputfield4;
-      this.$parent.saveData('newGoal2part5', this.inputfield5);
+      this.$parent.saveData('newGoal1part5', this.inputfield5);
       this.goal2Rewrite4 = this.inputfield5;
     },
     popup1: function() {
@@ -73,20 +73,20 @@ pageComponentry = {
   ready: function() {
     courseFeatureJBA.transitionIn(); courseFeatureJBA.flexySpeckCheck();
     var self = this;
-    if(this.exerciseData['newGoal2part1']){
-      this.inputfield1 = this.exerciseData['newGoal2part1'];
+    if(this.exerciseData['newGoal1part1']){
+      this.inputfield1 = this.exerciseData['newGoal1part1'];
     }
-    if(this.exerciseData['newGoal2part2']){
-      this.inputfield2 = this.exerciseData['newGoal2part2'];
+    if(this.exerciseData['newGoal1part2']){
+      this.inputfield2 = this.exerciseData['newGoal1part2'];
     }
-    if(this.exerciseData['newGoal2part3']){
-      this.inputfield3 = this.exerciseData['newGoal2part3'];
+    if(this.exerciseData['newGoal1part3']){
+      this.inputfield3 = this.exerciseData['newGoal1part3'];
     }
-    if(this.exerciseData['newGoal2part4']){
-      this.inputfield4 = this.exerciseData['newGoal2part4'];
+    if(this.exerciseData['newGoal1part4']){
+      this.inputfield4 = this.exerciseData['newGoal1part4'];
     }
-    if(this.exerciseData['newGoal2part5']){
-      this.inputfield5 = this.exerciseData['newGoal2part5'];
+    if(this.exerciseData['newGoal1part5']){
+      this.inputfield5 = this.exerciseData['newGoal1part5'];
     }
 
 
